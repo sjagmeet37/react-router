@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Customer from "./pages/Customer";
 import Root from "./component/Root";
 import ErrorPage from "./component/Error";
+import CustomersDetails from "./pages/CustomersDetails";
 
 
 
@@ -11,7 +12,8 @@ const routes = createBrowserRouter([
    element: <Root />,
    children: [
     {path : '/', element : <Home />},
-    {path : '/customers', element : <Customer />}
+    {path : '/customers', element : <Customer />},
+    {path : '/customers/:customerId', element : <CustomersDetails />}
    ],
    errorElement: <ErrorPage />
   }
